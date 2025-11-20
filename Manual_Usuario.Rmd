@@ -1,0 +1,203 @@
+# 📗 Manual de Usuario – Farma Rapid
+
+## 1. Presentación del sistema
+
+**Farma Rapid** es una aplicación web para la gestión básica de una farmacia.\
+Permite:
+
+-   Registrar y consultar medicamentos.
+-   Registrar clientes.
+-   Administrar recetas y sus medicamentos.
+-   Registrar ventas y consultar el historial.
+
+La interfaz está diseñada para ser simple: un menú lateral con cuatro opciones:
+
+-   **Catálogo**
+-   **Clientes**
+-   **Recetas**
+-   **Ventas**
+
+------------------------------------------------------------------------
+
+## 2. Requisitos para usar el sistema
+
+-   Navegador web actualizado (Google Chrome, Edge o similar).
+-   Conexión a la red local donde esté desplegado el backend.
+-   URL de acceso al frontend, por ejemplo: `http://localhost:4200/`.
+
+> El sistema no requiere instalación en el equipo del usuario; basta con abrir la URL.
+
+------------------------------------------------------------------------
+
+## 3. Pantalla principal y navegación
+
+Al ingresar a la URL se muestra la **pantalla principal** con:
+
+-   **Barra superior**: título *Farma Rapid* y datos del proyecto.\
+-   **Menú lateral izquierdo**:
+    -   **Catálogo** – administración de medicamentos.
+    -   **Clientes** – administración de clientes.
+    -   **Recetas** – listado de recetas registradas.
+    -   **Ventas** – historial de ventas.
+
+Para cambiar de módulo, basta con hacer clic en la opción correspondiente del menú.
+
+------------------------------------------------------------------------
+
+## 4. Módulo Catálogo (Medicamentos)
+
+### 4.1 Ver el listado de medicamentos
+
+1.  En el menú lateral, haga clic en **Catálogo**.\
+2.  Se mostrará una tarjeta central con el título **“Catálogo de medicamentos”**.\
+3.  Debajo se encuentra una tabla con las columnas:
+    -   **ID**
+    -   **Nombre**
+    -   **Descripción**
+    -   **Precio venta**
+    -   **Acciones**
+
+Si no hay medicamentos registrados, la tabla aparecerá vacía.
+
+### 4.2 Registrar un nuevo medicamento
+
+1.  En la vista de **Catálogo**, haga clic en el botón **“+ Nuevo medicamento”** ubicado en la parte superior derecha de la tarjeta.\
+2.  Se abrirá un formulario con campos como:
+    -   Nombre
+    -   Descripción
+    -   Precio de venta
+3.  Complete la información requerida.\
+4.  Haga clic en **Guardar**.\
+5.  Si los datos son correctos, el sistema mostrará un mensaje de éxito y el nuevo medicamento aparecerá en la tabla.
+
+### 4.3 Editar un medicamento existente
+
+1.  En la tabla del catálogo, ubique el medicamento que desea modificar.\
+2.  En la columna **Acciones**, haga clic en el botón **“Editar”**.\
+3.  Se abrirá un formulario con los datos actuales.\
+4.  Modifique los campos necesarios y presione **Guardar**.\
+5.  La tabla se actualizará con la información modificada.
+
+### 4.4 Eliminar un medicamento
+
+1.  En la tabla, ubique el medicamento correspondiente.\
+2.  Haga clic en el botón **“Eliminar”**.\
+3.  El sistema mostrará un mensaje de confirmación.\
+4.  Si confirma la acción, el medicamento será eliminado del catálogo.
+
+> **Nota:** Por seguridad, se recomienda no eliminar medicamentos que estén asociados a ventas anteriores. En ese caso, puede desactivar el medicamento o evitar su uso en nuevas ventas.
+
+------------------------------------------------------------------------
+
+## 5. Módulo Clientes
+
+### 5.1 Ver clientes registrados
+
+1.  Seleccione **Clientes** en el menú lateral.\
+2.  Aparecerá el título **“Clientes registrados”**.\
+3.  Se muestra una tabla con columnas típicas:
+    -   ID
+    -   Documento
+    -   Nombre
+    -   Teléfono
+    -   Email
+    -   Dirección
+    -   Acciones
+
+### 5.2 Registrar un nuevo cliente
+
+1.  En la parte superior derecha, pulse el botón **“+ Nuevo cliente”**.\
+2.  Rellene los datos del formulario (documento, nombre completo, teléfono, etc.).\
+3.  Presione **Guardar**.\
+4.  El nuevo cliente se añadirá a la lista.
+
+### 5.3 Editar un cliente
+
+1.  En la tabla de clientes, haga clic en **Editar** en la fila correspondiente.\
+2.  Modifique los datos necesarios.\
+3.  Pulse **Guardar** para aplicar los cambios.
+
+### 5.4 Eliminar un cliente
+
+1.  En la fila del cliente, haga clic en **Eliminar**.\
+2.  Confirme la acción cuando el sistema lo solicite.\
+3.  El registro será eliminado de la base de datos.
+
+------------------------------------------------------------------------
+
+## 6. Módulo Recetas
+
+> Este módulo muestra las recetas almacenadas en el sistema y los medicamentos asociados a cada una.
+
+### 6.1 Consultar recetas
+
+1.  Haga clic en **Recetas** en el menú lateral.\
+2.  Se mostrará el título **“Recetas y medicamentos recetados”**.\
+3.  Si aún no existen recetas, aparecerá el mensaje **“No hay recetas registradas”**.\
+4.  Cuando existan recetas, se presentará una tabla con:
+    -   ID de la receta
+    -   Cliente
+    -   Doctor
+    -   Fecha
+    -   Acciones (ver detalles, etc.)
+
+### 6.2 Ver el detalle de una receta *(opcional, si lo tienes implementado)*
+
+1.  En la fila de la receta, haga clic en el botón **Ver** o en el ícono correspondiente.\
+2.  Se abrirá una vista con la lista de medicamentos recetados, dosis y observaciones.
+
+> El flujo exacto puede variar según lo que hayas implementado; ajusta los pasos a tu sistema real.
+
+------------------------------------------------------------------------
+
+## 7. Módulo Ventas
+
+### 7.1 Consultar ventas registradas
+
+1.  Seleccione **Ventas** en el menú lateral.\
+2.  La pantalla mostrará el título **“Ventas registradas”**.\
+3.  Debajo, una tabla con columnas como:
+    -   ID
+    -   Cliente (ID)
+    -   Fecha
+    -   Subtotal
+    -   Impuestos
+    -   Total
+
+Si la letra de la tabla se ve muy clara, el usuario puede acercar el zoom del navegador para mejorar la visualización.
+
+### 7.2 Registrar una nueva venta *(si tu frontend lo permite)*
+
+1.  En la parte superior derecha, presione **“+ Nueva venta”**.\
+2.  Seleccione el cliente y añada los medicamentos con sus cantidades.\
+3.  Verifique los totales calculados automáticamente.\
+4.  Haga clic en **Guardar venta**.\
+5.  La venta aparecerá en la tabla de ventas.
+
+------------------------------------------------------------------------
+
+## 8. Consejos de uso y buenas prácticas
+
+-   Revise con frecuencia los datos de **Clientes** y **Medicamentos** para evitar duplicados.\
+-   Antes de eliminar un registro, confirme que no será necesario para reportes históricos.\
+-   Utilice nombres claros en los medicamentos para facilitar la búsqueda en el catálogo.\
+-   Si la aplicación muestra errores repetitivos, informe al administrador del sistema.
+
+------------------------------------------------------------------------
+
+## 9. Cierre de sesión y salida
+
+En esta versión académica, el sistema puede no incluir autenticación completa.\
+Para dejar de usar la aplicación, simplemente:
+
+1.  Cierre la pestaña o ventana del navegador.\
+2.  Si el backend está ejecutándose en tu propio equipo, puede detenerse desde la consola correspondiente.
+
+------------------------------------------------------------------------
+
+## 10. Soporte
+
+En caso de problemas técnicos o dudas sobre el funcionamiento:
+
+-   Contactar al **administrador del sistema** o al equipo de desarrollo del proyecto.\
+-   Entregar capturas de pantalla del error y explicar brevemente qué acción se estaba realizando cuando ocurrió.
